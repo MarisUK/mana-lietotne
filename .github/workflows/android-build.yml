@@ -15,6 +15,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - uses: gradle/actions/setup-gradle@v4
+      - run: ./gradlew --version
       - run: chmod +x gradlew
       - run: ./gradlew assembleRelease bundleRelease
       - name: Upload APK
